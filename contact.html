@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Contact Crispy & Chips for your feedback, inquiries, and more. Get in touch with us via email, Facebook, or Instagram.">
+    <title>Contact - Crispy & Chips</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://i.imgur.com/w4hEvRJ.png" alt="Crispy & Chips Logo">
+            <span>Crispy & Chips</span>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+           
+        </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Contact Info Section -->
+    <div class="container text-center mt-5 pt-5">
+        <h2 class="mb-4">You Can Reach Us At:</h2>
+        <div class="row justify-content-center contact-info">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="fas fa-envelope"></i> Email:</h5>
+                        <p>crispynchips@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="fab fa-facebook"></i> Facebook:</h5>
+                        <p>crispy&chips</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="fab fa-instagram"></i> Instagram:</h5>
+                        <p>crispynchips</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Image Section -->
+    <img src="https://png.pngtree.com/thumb_back/fw800/background/20230113/pngtree-delicious-snack-potato-chips-photography-image_1519587.jpg" alt="Delicious snack of crispy potato chips" class="img-fluid d-block w-100">
+    
+    <!-- Contact Form Section -->
+<div class="container">
+    <h1 class="text-center mb-4">-Feedback-</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <form action="submit_form.php" method="POST" onsubmit="thankYouMessage(event)">
+                <script>
+                    function thankYouMessage(event) {
+                        event.preventDefault(); // Menghalang form dari refresh
+                        alert("Thank you for your response!!!!!!!!!!!!   ;)"); //  mesej
+                        document.querySelector("form").reset(); // Kosongkan form
+                    }
+                    </script>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject:</label>
+                    <input type="text" id="subject" name="subject" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                </div>
+
+                <!-- Custom Submit Button with Icons -->
+                <button type="submit" class="btn btn-primary w-100 d-flex justify-content-center align-items-center">
+                    
+                    <i class="fab fa-facebook-f me-2"></i>
+                    <i class="fab fa-instagram me-2"></i>
+                    <i class="fas fa-envelope me-2"></i>
+                    <i href="https://www.instagram.com/crispynchips?igsh=NTlndnVyaWx5ZG5p"></i>
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer Section -->
+    <footer class="footer text-center mt-5">
+        &copy; <span id="year"></span> Crispy & Chips. Semua Hak Cipta Terpelihara.
+        <div class="social-icons mt-2">
+            <a href="https://www.facebook.com/share/1A2tk4Ws7V/?mibextid=wwXIfr" class="text-blue"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/crispynchips?igsh=NTlndnVyaWx5ZG5p" class="text-black"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-blue"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to dynamically update year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
